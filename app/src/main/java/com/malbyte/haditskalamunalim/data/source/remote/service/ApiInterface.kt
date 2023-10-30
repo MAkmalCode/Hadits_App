@@ -3,8 +3,6 @@ package com.malbyte.haditskalamunalim.data.source.remote.service
 import com.malbyte.haditskalamunalim.data.source.remote.models.HaditsResponse
 import com.malbyte.haditskalamunalim.data.source.remote.models.PerawiResponse
 import com.malbyte.haditskalamunalim.data.source.remote.models.SearchHaditsResponse
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -26,12 +24,4 @@ interface ApiInterface {
         @Path("nomorHadis") nomorHadis: Int
     ): SearchHaditsResponse
 
-    companion object {
-        private const val BASE_URL = "https://hadis-api-id.vercel.app/"
-        fun createApi() = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(ApiInterface::class.java)
-    }
 }
