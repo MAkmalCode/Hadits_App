@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.malbyte.haditskalamunalim.ui.Perawi.PerawiScreen
+import com.malbyte.haditskalamunalim.ui.hadits.HaditsScreen
 import com.malbyte.haditskalamunalim.ui.theme.HaditsKalamunAlimTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    PerawiScreen()
+                    HaditsScreen()
                 }
             }
         }

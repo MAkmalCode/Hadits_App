@@ -21,5 +21,5 @@ data class Pagination(
     @SerializedName("totalItems")
     val totalItems: Int,
     @SerializedName("totalPages")
-    val totalPages: Any
+    val totalPages: Int
 )

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.malbyte.haditskalamunalim.data.repository.MainRepository
 import com.malbyte.haditskalamunalim.di.Injection
 import com.malbyte.haditskalamunalim.ui.Perawi.PerawiViewModel
+import com.malbyte.haditskalamunalim.ui.hadits.HaditsViewModel
 
 @Suppress("UNCHECKED_CAST")
 class ViewModelFactory(
@@ -14,6 +15,7 @@ class ViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T =
         when {
             modelClass.isAssignableFrom(PerawiViewModel::class.java) -> PerawiViewModel(repository) as T
+            modelClass.isAssignableFrom(HaditsViewModel::class.java) -> HaditsViewModel(repository) as T
             else -> throw Throwable("Unknown ViewModel Class" + modelClass.name)
         }
 
