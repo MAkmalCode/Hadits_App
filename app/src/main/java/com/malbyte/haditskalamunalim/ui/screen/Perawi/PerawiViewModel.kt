@@ -1,18 +1,24 @@
-package com.malbyte.haditskalamunalim.ui.Perawi
+package com.malbyte.haditskalamunalim.ui.screen.Perawi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.malbyte.haditskalamunalim.data.repository.MainRepository
-import com.malbyte.haditskalamunalim.ui.Perawi.state.PerawiState
+import com.malbyte.haditskalamunalim.data.repository.HaditsRepository
+import com.malbyte.haditskalamunalim.ui.screen.Perawi.state.PerawiState
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class PerawiViewModel(
-    private val repository: MainRepository
+    private val repository: HaditsRepository
 ) : ViewModel() {
-    private var _getPerawi = MutableStateFlow<PerawiState?>(null)
-    var getPerawi = _getPerawi.asStateFlow()
+    private var _getPerawi = MutableStateFlow<PerawiState?>(PerawiState.Loading)
+    var getPerawi = _getPerawi.asStateFlow().stateIn(
+        viewModelScope,
+        SharingStarted.WhileSubscribed(5000),
+        PerawiState.Loading
+    )
 
     fun getList() {
         viewModelScope.launch {

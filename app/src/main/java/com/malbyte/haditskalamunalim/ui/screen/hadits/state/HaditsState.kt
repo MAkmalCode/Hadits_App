@@ -1,4 +1,4 @@
-package com.malbyte.haditskalamunalim.ui.hadits.state
+package com.malbyte.haditskalamunalim.ui.screen.hadits.state
 
 import com.malbyte.haditskalamunalim.data.source.remote.models.HaditsResponse
 

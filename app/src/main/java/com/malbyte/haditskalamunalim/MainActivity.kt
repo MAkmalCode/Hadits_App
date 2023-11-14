@@ -7,9 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.malbyte.haditskalamunalim.ui.Perawi.PerawiScreen
-import com.malbyte.haditskalamunalim.ui.hadits.HaditsScreen
+import com.malbyte.haditskalamunalim.ui.screen.NavGraphs
 import com.malbyte.haditskalamunalim.ui.theme.HaditsKalamunAlimTheme
+import com.ramcosta.composedestinations.DestinationsNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HaditsScreen()
+                    DestinationsNavHost(
+                        navGraph = NavGraphs.root
+                    )
                 }
             }
         }

@@ -1,4 +1,4 @@
-package com.malbyte.haditskalamunalim.ui.Perawi.state
+package com.malbyte.haditskalamunalim.ui.screen.Perawi.state
 
 import com.malbyte.haditskalamunalim.data.source.remote.models.PerawiResponse
 

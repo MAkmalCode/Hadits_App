@@ -1,16 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("com.google.devtools.ksp") version "1.9.10-1.0.13"
 }
 
 android {
     namespace = "com.malbyte.haditskalamunalim"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.malbyte.haditskalamunalim"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -40,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -60,6 +61,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -75,4 +77,8 @@ dependencies {
     // paging
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
     implementation("androidx.paging:paging-compose:3.2.1")
+
+    // navigation
+    implementation("io.github.raamcosta.compose-destinations:core:1.9.54")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.9.54")
 }
