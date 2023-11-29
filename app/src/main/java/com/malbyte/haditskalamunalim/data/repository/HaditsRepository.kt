@@ -1,20 +1,21 @@
 package com.malbyte.haditskalamunalim.data.repository
 
-import com.malbyte.haditskalamunalim.data.source.remote.models.HaditsResponse
+import androidx.paging.PagingData
+import com.malbyte.haditskalamunalim.data.source.remote.models.Item
 import com.malbyte.haditskalamunalim.data.source.remote.models.PerawiResponse
 import com.malbyte.haditskalamunalim.data.source.remote.models.SearchHaditsResponse
+import kotlinx.coroutines.flow.Flow
 
 interface HaditsRepository{
     suspend fun getPerawi(): PerawiResponse
 
-    suspend fun getHadits(
-        perawi: String,
-        page: Int = 1,
-        limit: Int = 20
-    ): HaditsResponse
+    fun getHadits(
+        perawiSlug: String,
+        perawiName: (String) -> Unit
+    ): Flow<PagingData<Item>>
 
     suspend fun search(
         perawi: String,
-        nomorHadis: Int
+        nomorHadis: Int,
     ): SearchHaditsResponse
 }

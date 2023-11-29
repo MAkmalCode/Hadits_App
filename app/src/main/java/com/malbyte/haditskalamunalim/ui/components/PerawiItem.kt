@@ -30,7 +30,6 @@ fun PerawiItem(perawi: String, jumlahHadits: Int, goToHadits: () -> Unit) {
     ) {
         Column(
             modifier = Modifier
-                .padding(16.dp)
                 .fillMaxWidth()
                 .background(
                     Brush.horizontalGradient(
@@ -41,7 +40,7 @@ fun PerawiItem(perawi: String, jumlahHadits: Int, goToHadits: () -> Unit) {
                     ),
                     RoundedCornerShape(5.dp)
                 )
-                .padding(5.dp)
+                .padding(16.dp)
         ) {
             Text(
                 text = perawi,

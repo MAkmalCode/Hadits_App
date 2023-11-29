@@ -93,43 +93,5 @@ fun PerawiScreen(
 
             }
         }
-
-//        when (val state = getPerawiState) {
-//            is PerawiState.Error -> {
-//                Box(
-//                    modifier = Modifier.padding(it),
-//                    contentAlignment = Alignment.Center
-//                ) {
-//                    Text(text = state.message)
-//                }
-//            }
-//
-//            is PerawiState.Loading -> {
-//                Box(
-//                    modifier = Modifier.padding(it),
-//                    contentAlignment = Alignment.Center
-//                ) {
-//                    CircularProgressIndicator()
-//                }
-//            }
-//
-//            is PerawiState.Success -> {
-//                Column(modifier = Modifier.padding(it)) {
-//                    LazyVerticalGrid(
-//                        columns = GridCells.Fixed(2),
-//                        content = {
-//                            items(10){
-//                                PerawiItem(perawi = "Bukhari", jumlahHadits = 20){
-//
-//                                }
-//                            }
-//                        })
-//                }
-//            }
-//
-//            null -> {
-//
-//            }
-//        }
     }
 }

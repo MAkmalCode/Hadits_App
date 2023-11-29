@@ -81,4 +81,7 @@ dependencies {
     // navigation
     implementation("io.github.raamcosta.compose-destinations:core:1.9.54")
     ksp("io.github.raamcosta.compose-destinations:ksp:1.9.54")
+
+    // icon
+    implementation("androidx.compose.material:material-icons-extended-android:1.5.4")
 }
