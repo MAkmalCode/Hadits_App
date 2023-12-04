@@ -2,4 +2,11 @@
 <resources>
 
     <style name="Theme.HaditsKalamunAlim" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="MySplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_hadits</item>
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="android:animationDuration">10000</item>
+        <item name="postSplashScreenTheme">@style/Theme.HaditsKalamunAlim</item>
+    </style>
+
 </resources>

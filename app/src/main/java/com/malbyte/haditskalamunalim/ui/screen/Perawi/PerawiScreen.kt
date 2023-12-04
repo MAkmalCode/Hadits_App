@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.malbyte.haditskalamunalim.HaditsComposeApplicatiom
+import com.malbyte.haditskalamunalim.HaditsComposeApplication
 import com.malbyte.haditskalamunalim.data.factory.ViewModelFactory
 import com.malbyte.haditskalamunalim.ui.components.PerawiItem
 import com.malbyte.haditskalamunalim.ui.screen.Perawi.state.PerawiState
@@ -39,7 +39,7 @@ fun PerawiScreen(
     navigator: DestinationsNavigator,
     viewModel: PerawiViewModel = viewModel(
         factory = ViewModelFactory {
-            PerawiViewModel(HaditsComposeApplicatiom.repository)
+            PerawiViewModel(HaditsComposeApplication.repository)
         }
     )
 ) {

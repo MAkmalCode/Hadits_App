@@ -6,7 +6,7 @@ import com.malbyte.haditskalamunalim.data.repository.HaditsrepositoryImpl
 import com.malbyte.haditskalamunalim.di.AppModule
 import com.malbyte.haditskalamunalim.di.AppModuleImpl
 
-class HaditsComposeApplicatiom : Application(){
+class HaditsComposeApplication : Application(){
     companion object{
         lateinit var repository: HaditsRepository
         private lateinit var appModule: AppModule

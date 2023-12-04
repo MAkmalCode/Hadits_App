@@ -22,7 +22,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemContentType
-import com.malbyte.haditskalamunalim.HaditsComposeApplicatiom
+import com.malbyte.haditskalamunalim.HaditsComposeApplication
 import com.malbyte.haditskalamunalim.data.factory.ViewModelFactory
 import com.malbyte.haditskalamunalim.ui.components.HaditsItem
 import com.ramcosta.composedestinations.annotation.Destination
@@ -39,7 +39,7 @@ data class HaditsListScreenNavArgs(
 fun HaditsScreen(
     viewModel: HaditsViewModel = viewModel(
         factory = ViewModelFactory { handle ->
-            HaditsViewModel(HaditsComposeApplicatiom.repository, handle)
+            HaditsViewModel(HaditsComposeApplication.repository, handle)
         }
     )
 ) {

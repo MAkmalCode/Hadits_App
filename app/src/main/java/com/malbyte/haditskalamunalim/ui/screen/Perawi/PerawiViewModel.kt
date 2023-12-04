@@ -20,11 +20,16 @@ class PerawiViewModel(
         PerawiState.Loading
     )
 
+//    private val _loading = MutableStateFlow(true)
+//    val loading = _loading.asStateFlow()
+
     fun getList() {
         viewModelScope.launch {
             _getPerawi.emit(PerawiState.Loading)
             try {
                 _getPerawi.emit(PerawiState.Success(repository.getPerawi()))
+//                _loading.emit(false)
+
             } catch (e: Exception) {
                 _getPerawi.emit(PerawiState.Error(e.message.toString()))
             }
